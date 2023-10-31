@@ -91,13 +91,21 @@ We have tested the following projects: **mono_euroc, mono_inertial_euroc, stereo
 
 
 
-Set .lib 
-Configurartion .lib
+**Set .lib** 
+Configurartion Properties - General - Configurartion type **.lib**
+Configurartion Properties - General - Target Extension  **.lib**
 
 **Add lib**
-Linker - input - Additional dependencies  - eg,. **E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\lib\Release\pangolin.lib** E:\queenie\ORB-SLAM3forWindows\Thirdparty\g2o\build\Release\g2o.lib
+Linker - input - Additional dependencies  - eg,. **E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\lib\Release\pangolin.lib** 
+The following should be added (directories may be different):
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\g2o\build\Release\g2o.lib 
+
 **Add include**
-C/C++ - Additional Include Directories - **E:\queenie\opencv\build\include**
+C/C++ - Additional Include Directories - **E:\queenie\opencv\build\include** 
+The following should be added (directories may be different):
+E:\queenie\Thirdparty\boost_1_67_0\
+E:\queenie\opencv\build\include
+
 **Set MT**
 C/C++ - Code generation - Runtime library - **Multi-threaded (/MT)**
 
