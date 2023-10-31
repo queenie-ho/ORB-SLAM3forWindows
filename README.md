@@ -87,3 +87,20 @@ We have tested the following projects: **mono_euroc, mono_inertial_euroc, stereo
 `mono_inertial_euroc.exe (path_to_vocabulary) (path_to_settings) (path_to_image_folder_1) (path_to_times_file_1) (path_to_image_folder_2) (path_to_times_file_2) ... (path_to_image_folder_N) (path_to_times_file_N)`
 - The result of Machine Hall 01 Dataset (monocular-inertial):  
 <img width="980" alt="example_mono_inertial_euroc" src="https://user-images.githubusercontent.com/68829425/88619172-de098a00-d0d5-11ea-8167-2329bd44611a.png">
+
+
+
+
+Set .lib 
+Configurartion .lib
+
+**Add lib**
+Linker - input - Additional dependencies  - eg,. **E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\lib\Release\pangolin.lib** E:\queenie\ORB-SLAM3forWindows\Thirdparty\g2o\build\Release\g2o.lib
+**Add include**
+C/C++ - Additional Include Directories - **E:\queenie\opencv\build\include**
+**Set MT**
+C/C++ - Code generation - Runtime library - **Multi-threaded (/MT)**
+
+# Error
+Cannot open include file: 'unistd.h': No such file or directory	
+adding #include <unistd.h> , you can put it in System.h instead. All other files include System.h in a nested manner.
