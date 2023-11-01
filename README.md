@@ -125,6 +125,6 @@ adding #include <unistd.h> , you can put it in System.h instead. All other files
 >>put the uninstd.h in C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include << this directory can be checked out in right click VS project - properties - vc/c++ directory
 
 # Error
-fatal error LNK1104: cannot open file 'libboost_system-vc110-mt-gd-1_51.lib'
-dowloaded boost_1_83_0-msvc-10.0-32.exe and execute again
+Error	LNK1104	cannot open file 'libboost_serialization-**vc141**-mt-s-**x32**-**1_83**.lib'
+dowloaded boost-binaries/1.83.0/boost_**1_83**_0-msvc-**14.1**-**32.exe** and execute again
 https://sourceforge.net/projects/boost/
