@@ -112,3 +112,19 @@ C/C++ - Code generation - Runtime library - **Multi-threaded (/MT)**
 # Error
 Cannot open include file: 'unistd.h': No such file or directory	
 adding #include <unistd.h> , you can put it in System.h instead. All other files include System.h in a nested manner.
+使用 Visual Studio 2015 进行程序开发工作时，如果编译的是来自于Linux平台的源文件，该源文件可能会包含头文件 uninstd.h，这样会产生报错信息：
+"fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory"
+解决办法：
+
+在VS的安装目录下找到 "VC\include" 文件夹，在其中创建一个 uninstd.h 文件，内容如下：
+
+#ifndef _UNISTD_H
+#define _UNISTD_H 
+#include <io.h> 
+#include <process.h> 
+#endif   
+
+# Error
+fatal error LNK1104: cannot open file 'libboost_system-vc110-mt-gd-1_51.lib'
+dowloaded boost_1_83_0-msvc-10.0-32.exe and execute again
+https://sourceforge.net/projects/boost/
