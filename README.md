@@ -109,6 +109,55 @@ E:\queenie\opencv\build\include
 **Set MT**
 C/C++ - Code generation - Runtime library - **Multi-threaded (/MT)**
 
+**include path list**
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\eigen
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\include
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\src\include
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\glew\include
+E\\\\\\\\\\\\\\\\\
+:\queenie\opencv\build\install\include
+/////////OR/////////
+E:\queenie\opencv\build\include
+\\\\\\\\\\\\\\\\\
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\boost\boost_1_83_0
+
+**libary path list**
+E:\queenie\opencv\build\lib\Release\opencv_world3416.lib
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\glew\lib\glew.lib
+Release\ORB_SLAM3.lib
+\\\\\\\\\\\\\\\\\\\\\\\\\\
+E:\queenie\orbslam3-windows\Thirdparty\Pangolin\lib\Release\pangolin.lib
+////////////////OR///////////
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\lib\Release\pangolin.lib
+\\\\\\\\\\\\\\\\\\\\\\\\\\
+glu32.lib
+opengl32.lib
+E:\queenie\OpenNI2\Lib\OpenNI2.lib
+E:\queenie\New folder\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\libpng\src\__libpng\projects\visualc71\Win32_LIB_Release\libpng.lib
+/////////////////////////
+E:\queenie\New folder\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\libpng\src\__libpng\projects\visualc71\Win32_LIB_Release\ZLib\zlib.lib
+////////////////OR///////////
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\zlib\lib\zlibstatic.lib
+/////////////////////////
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\Pangolin\build\external\libjpeg\src\__libjpeg-build\Release\jpeg.lib
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\DBoW2\lib\Release\DBoW2.lib
+E:\queenie\ORB-SLAM3forWindows\Thirdparty\g2o\build\Release\g2o.lib
+kernel32.lib
+user32.lib
+gdi32.lib
+winspool.lib
+shell32.lib
+ole32.lib
+oleaut32.lib
+uuid.lib
+comdlg32.lib
+advapi32.lib
+E:\queenie\boost_1_83_0\lib32-msvc-14.1\libboost_serialization-vc141-mt-s-x32-1_83.lib
+
+# Error
+VS2017 MSVCRTD.lib(_chandler4gs_.obj) : error LNK2019: unresolved external symbol __except_handler4_common referenced in function __except_handler4
+>>>>put pangolin.lib under openngl32.lib
+
 # Error
 Cannot open include file: 'unistd.h': No such file or directory	
 adding #include <unistd.h> , you can put it in System.h instead. All other files include System.h in a nested manner.
@@ -128,3 +177,17 @@ adding #include <unistd.h> , you can put it in System.h instead. All other files
 Error	LNK1104	cannot open file 'libboost_serialization-**vc141**-mt-s-**x32**-**1_83**.lib'
 dowloaded boost-binaries/1.83.0/boost_**1_83**_0-msvc-**14.1**-**32.exe** and execute again
 https://sourceforge.net/projects/boost/
+
+Git Bash
+./mono_euroc ../../../Vocabulary/ORBvoc.txt ../../../Examples/Monocular/EuRoC.yaml ../../../Examples/Monocular/Release ../../../Examples/Monocular/EuRoC_TimeStamps/MH01.txt dataset-MH01_mono
+Command Prompt
+mono_euroc.exe ..\..\..\Vocabulary\ORBvoc.txt ..\EuRoC.yaml ..\Release ..\EuRoC_TimeStamps\MH01.txt MH01
+
+
+# Error 
+command no responds after enterring "mono_euroc.exe ..\..\..\Vocabulary\ORBvoc.txt ..\EuRoC.yaml ..\Release ..\EuRoC_TimeStamps\MH01.txt MH01" 
+>>> check the correct path of the data!!!
+
+# Error
+cannot find opencv_world3416.dll 
+>>>>put the dll file into the output path of the project (output path of the mono_euroc.exe)
