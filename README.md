@@ -1,5 +1,4 @@
 # ORB-SLAM3 for Windows
-This is just to archive the ORB-SLAM3 for Windows and the source code is from https://github.com/chanho-code/ORB-SLAM3forWindows
 
 ORB-SLAM3 Project for Windows Platform (espacially Visual Studio)  
 We have tested the library in Windows 10, Visual Studio 2015.
@@ -162,7 +161,7 @@ VS2017 MSVCRTD.lib(_chandler4gs_.obj) : error LNK2019: unresolved external symbo
 Cannot open include file: 'unistd.h': No such file or directory	
 adding #include <unistd.h> , you can put it in System.h instead. All other files include System.h in a nested manner.
 
-如果编译的是来自于Linux平台的源文件，该源文件可能会包含头文件 uninstd.h，这样会产生报错信息：
+
 "fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory"
 
 >>create uninstd.h  with the following content:
@@ -191,3 +190,5 @@ command no responds after enterring "mono_euroc.exe ..\..\..\Vocabulary\ORBvoc.t
 # Error
 cannot find opencv_world3416.dll 
 >>>>put the dll file into the output path of the project (output path of the mono_euroc.exe)
+
+The source code is from https://github.com/chanho-code/ORB-SLAM3forWindows
